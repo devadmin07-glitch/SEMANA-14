@@ -1,5 +1,5 @@
 # SEMANA-14
-# Instalación y ejecución
+# Instalación y credenciales
 Descargar el repositorio.
 Abrir el archivo HotelReservasMVC.csproj en Visual Studio.
 Ejecutar el script SQL HotelReservaDB para configurar la base de datos.
