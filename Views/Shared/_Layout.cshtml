@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport"
+			  content="width=device-width, initial-scale=1" />
+
+		<title>@ViewData["Title"] - Reserva de Hotel</title>
+
+		<link rel="stylesheet"
+			  href="~/css/site.css"
+			  asp-append-version="true" />
+	</head>
+	<body>
+
+		<header class="site-header">
+			<div class="container nav-bar">
+
+				<a class="titulo-hotel"
+				   asp-controller="Home"
+				   asp-action="Index">
+					RESERVA DE HOTEL
+				</a>
+
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <nav class="menu-derecha">
+                        <a asp-controller="Home" asp-action="Index">INICIO</a>
+                        <form asp-controller="Cuenta" asp-action="CerrarSesion" method="post" class="logout-form">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="logout-button">CERRAR SESION</button>
+                        </form>
+                    </nav>
+                }
+
+			</div>
+		</header>
+
+		<main class="container page-content">
+			@RenderBody()
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				Sistema de Reserva de Hotel
+			</div>
+		</footer>
+
+		@await RenderSectionAsync(
+		"Scripts", required: false)
+
+	</body>
+</html>

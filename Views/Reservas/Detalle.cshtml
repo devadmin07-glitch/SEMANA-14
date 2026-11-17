@@ -1,0 +1,9 @@
+@model HotelReservasMVC.Models.Reserva
+@{ ViewData["Title"]="Detalle de reserva";
+   var confirmacion = TempData["Exito"] as string; }
+<div class="page-title"><div class="eyebrow">REGISTRO CONFIRMADO</div><h1>Reserva #@Model.Id</h1><p>@(confirmacion ?? "Consulta del registro guardado en SQL Server.")</p></div>
+<section class="panel"><div class="info-grid"><div><span>Cliente</span><strong>@Model.Cliente.NombreCompleto</strong></div><div><span>Fecha de llegada</span><strong>@Model.FechaLlegada.ToString("dd/MM/yyyy")</strong></div><div><span>Fecha de salida</span><strong>@Model.FechaSalida.ToString("dd/MM/yyyy")</strong></div><div><span>Días</span><strong>@Model.Dias</strong></div></div>
+  <div class="table-scroll"><table><thead><tr><th>Habitación</th><th>Tipo</th><th>Huésped</th><th>Tarifa diaria</th><th>Días</th><th>Monto</th></tr></thead><tbody>@foreach(var d in Model.Detalles){<tr><td>@d.Habitacion.Numero</td><td>@d.Habitacion.Tipo</td><td>@d.NombreHuesped</td><td>S/ @d.TarifaDia.ToString("N2")</td><td>@d.Dias</td><td>S/ @d.Monto.ToString("N2")</td></tr>}</tbody></table></div>
+  <div class="totals"><div><span>Subtotal</span><strong>S/ @Model.Subtotal.ToString("N2")</strong></div><div><span>IGV</span><strong>S/ @Model.Igv.ToString("N2")</strong></div><div class="grand"><span>Total</span><strong>S/ @Model.Total.ToString("N2")</strong></div></div>
+  <div class="actions end"><a asp-action="Index" class="btn btn-secondary">Ver historial</a><a asp-action="Nueva" class="btn btn-primary">Nueva reserva</a></div>
+</section>

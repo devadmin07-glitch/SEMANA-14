@@ -1,0 +1,41 @@
+@model HotelReservasMVC.ViewModels.ReservaVm
+@using System.Text.Json
+@{ ViewData["Title"]="Generar reserva"; }
+<div class="page-title"><h1>Generar reserva de habitación</h1><p>Selecciona el cliente, las fechas y una o más habitaciones disponibles.</p></div>
+<form method="post" asp-action="Nueva" id="formReserva" class="stack">
+  <div asp-validation-summary="All" class="validation"></div>
+  <section class="panel"><div class="section-header"><span class="step">01</span><div><h2>Datos del cliente</h2><p>Busca al cliente por nombre o registra uno nuevo.</p></div></div>
+      <div class="form-grid two"><div><label for="busquedaCliente">Buscar cliente</label><div class="input-button"><input type="search" id="busquedaCliente" placeholder="Nombre o apellido" /><button type="button" id="buscarClienteBtn" class="btn btn-secondary">Buscar</button></div></div><div><label asp-for="ClienteId">Cliente seleccionado</label><select asp-for="ClienteId" asp-items="ViewBag.Clientes"><option value="0">-- Seleccione cliente --</option></select></div></div>
+      <a asp-controller="Clientes" asp-action="Nuevo" class="small-link">+ Agregar un cliente que no existe</a>
+  </section>
+  <section class="panel"><div class="section-header"><span class="step">02</span><div><h2>Datos de la reserva</h2><p>La cantidad de días se calcula automáticamente.</p></div></div>
+      <div class="form-grid three"><div><label asp-for="FechaLlegada">Fecha de llegada</label><input asp-for="FechaLlegada" type="date" id="FechaLlegada" /></div><div><label asp-for="FechaSalida">Fecha de salida</label><input asp-for="FechaSalida" type="date" id="FechaSalida" /></div><div><label for="dias">Cantidad de días</label><input id="dias" value="1" readonly /></div></div>
+  </section>
+  <section class="panel"><div class="section-header"><span class="step">03</span><div><h2>Datos de las habitaciones</h2><p>Consulta disponibilidad para el período escogido.</p></div></div>
+      <div class="form-grid room-grid"><div><label for="habitacionSelect">Habitaciones disponibles</label><select id="habitacionSelect" disabled><option value="">Buscar habitaciones primero</option></select></div><div><label for="huesped">Nombre del huésped</label><input id="huesped" maxlength="150" placeholder="Nombre del huésped" /></div><div class="room-actions"><button type="button" id="buscarHabitacionesBtn" class="btn btn-secondary">Buscar habitación</button><button type="button" id="agregarHabitacionBtn" class="btn btn-primary" disabled>+ Agregar</button></div></div>
+      <div id="roomMessage" class="hint" role="status" aria-live="polite">Pulsa "Buscar habitación" para consultar disponibilidad.</div>
+      <div class="estados-habitaciones">
+        <h3>Estado de las habitaciones</h3>
+        <p class="hint">Disponible: se puede agregar. Reservado u Ocupado: no seleccionable.</p>
+        <div class="table-scroll"><table>
+          <thead><tr><th>Número</th><th>Tipo</th><th>Costo por día</th><th>Estado</th></tr></thead>
+          <tbody id="estadoHabitacionesBody">
+            <tr><td colspan="4" class="empty">Busque habitaciones para consultar sus estados.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+  </section>
+  <section class="panel"><div class="section-header"><span class="step">04</span><div><h2>Detalle de la reserva</h2><p>Puede eliminarse una habitación antes de grabar.</p></div></div>
+      <div class="table-scroll"><table><thead><tr><th>Número</th><th>Tipo</th><th>Huésped</th><th>Costo/día</th><th>Días</th><th>Monto</th><th></th></tr></thead><tbody id="filasReserva"><tr><td colspan="7" class="empty">Sin habitaciones agregadas.</td></tr></tbody></table></div>
+      <div class="totals"><div><span>Subtotal</span><strong id="subtotal">S/ 0.00</strong></div><div><span>IGV (18%)*</span><strong id="igv">S/ 0.00</strong></div><div class="grand"><span>Monto total</span><strong id="total">S/ 0.00</strong></div></div>
+      <p class="hint">* El 18% es una suposición de implementación del prototipo; la ECU original no fija tasa.</p>
+      <div id="hiddenItems"></div>
+      <div class="actions end"><a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Salir</a><button type="submit" class="btn btn-primary">Grabar reserva</button></div>
+  </section>
+</form>
+@section Scripts {
+<script>
+  window.initialHotelItems = @Html.Raw(JsonSerializer.Serialize(Model.Habitaciones));
+</script>
+<script src="~/js/reservas.js" asp-append-version="true"></script>
+}

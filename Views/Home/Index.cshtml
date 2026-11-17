@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+<div class="inicio-container">
+
+    <h1>Bienvenido al sistema de reservas</h1>
+
+    <p>
+        Selecciona una de las siguientes opciones:
+    </p>
+
+    <div class="opciones-inicio">
+
+        <div class="opcion-card">
+            <h2>Generar Reserva</h2>
+
+            <p>
+                Registrar una nueva reserva
+                de habitación para un cliente.
+            </p>
+
+            <a asp-controller="Reservas"
+               asp-action="Nueva"
+               class="btn btn-primary">
+                Generar reserva
+            </a>
+        </div>
+
+        <div class="opcion-card">
+            <h2>Historial de Reservas</h2>
+
+            <p>
+                Consultar las reservas
+                registradas en el sistema.
+            </p>
+
+            <a asp-controller="Reservas"
+               asp-action="Index"
+               class="btn btn-primary">
+                Ver historial
+            </a>
+        </div>
+
+    </div>
+
+</div>

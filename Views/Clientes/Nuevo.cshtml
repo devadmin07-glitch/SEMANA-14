@@ -1,0 +1,8 @@
+@model HotelReservasMVC.ViewModels.ClienteVm
+@{ ViewData["Title"]="Registrar cliente"; }
+<div class="page-title"><div class="eyebrow">HOTEL · MANTENER CLIENTES</div><h1>Registrar nuevo cliente</h1><p>Flujo alternativo del caso de uso si la búsqueda no encuentra al cliente.</p></div>
+<div class="panel narrow"><form asp-action="Nuevo" method="post"><div asp-validation-summary="All" class="validation"></div>
+  <label asp-for="Nombres">Nombres</label><input asp-for="Nombres" placeholder="Nombres" maxlength="90" />
+  <label asp-for="Apellidos">Apellidos</label><input asp-for="Apellidos" placeholder="Apellidos" maxlength="90" />
+  <div class="actions"><button type="submit" class="btn btn-primary">Guardar cliente</button><a asp-controller="Reservas" asp-action="Nueva" class="btn btn-secondary">Regresar a reserva</a></div>
+</form></div>

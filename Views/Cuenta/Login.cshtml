@@ -1,0 +1,31 @@
+@model HotelReservasMVC.ViewModels.LoginVm
+@{
+    ViewData["Title"] = "Iniciar sesión";
+}
+<div class="login-container">
+    <section class="login-card">
+        <div class="login-small">ACCESO DE RECEPCIONISTA</div>
+        <h1>Iniciar sesión</h1>
+        <p>Ingrese sus credenciales para administrar las reservas del hotel.</p>
+
+        @if (ViewBag.ErrorConexion != null)
+        {
+            <div class="login-alert" role="alert">@ViewBag.ErrorConexion</div>
+        }
+        <form asp-controller="Cuenta" asp-action="Login" method="post" class="login-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div asp-validation-summary="ModelOnly" class="validation" role="alert"></div>
+
+            <label asp-for="Usuario">Usuario</label>
+            <input asp-for="Usuario" autocomplete="username" autofocus placeholder="Usuario de recepcionista" />
+            <span asp-validation-for="Usuario" class="validation"></span>
+
+            <label asp-for="Contrasena">Contraseña</label>
+            <input asp-for="Contrasena" type="password" autocomplete="current-password" placeholder="Ingrese su contraseña" />
+            <span asp-validation-for="Contrasena" class="validation"></span>
+
+            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+        </form>
+    </section>
+</div>

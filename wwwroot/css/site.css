@@ -1,0 +1,148 @@
+:root{--navy:#142b46;--deep:#0c1f34;--blue:#1768a6;--aqua:#16a5a1;--line:#dce5ed;--muted:#637487;--bg:#f4f7fa;--white:#fff;--green:#2a8c68}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#21344a;font:15px/1.55 'Segoe UI',system-ui,-apple-system,sans-serif}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.container{max-width:1160px;margin:auto;padding:0 24px}.site-header{background:var(--deep);color:white;box-shadow:0 4px 20px #102c4c18}.nav-bar{display:flex;gap:30px;align-items:center;min-height:84px}.brand{color:#fff;display:flex;gap:12px;align-items:center;font-size:22px;font-weight:800;line-height:1.05;white-space:nowrap}.brand:hover{text-decoration:none}.brand-icon{background:linear-gradient(135deg,#2189bd,#17b49e);height:42px;width:42px;display:grid;place-items:center;border-radius:12px;font-size:25px;color:#fff}.brand small{display:block;font-size:10px;font-weight:500;letter-spacing:1.2px;color:#b6c6d5;margin-top:6px}.accent{color:#4be2c5}nav{display:flex;align-items:center;gap:26px;flex:1}nav a{color:#d9e4ee;font-size:13px;font-weight:600}.nav-user{display:flex;align-items:center;gap:12px;font-size:12px;color:#bfccda}.nav-user form{margin:0}.page-content{min-height:calc(100vh - 144px);padding-top:36px;padding-bottom:68px}.footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:22px 0}.hero{background:linear-gradient(110deg,#132d4c,#174d72 70%,#186c76);border-radius:22px;padding:58px 58px 40px;color:white;margin-bottom:26px;overflow:hidden;position:relative}.hero::after{content:'';position:absolute;width:360px;height:360px;border:1px solid #ffffff20;border-radius:100%;right:-70px;top:-140px;box-shadow:0 0 0 65px #ffffff07,0 0 0 130px #ffffff05;pointer-events:none}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.7px;color:var(--aqua);margin-bottom:13px}.hero .eyebrow{color:#64e8d4}.hero h1{font-size:clamp(32px,4vw,52px);line-height:1.15;margin:0 0 20px;letter-spacing:-1.2px}.hero h1 span{color:#64e8d4}.hero>p{max-width:600px;font-size:16px;color:#d5e5ed}.hero-stats{display:flex;gap:45px;margin-top:38px}.hero-stats>div{display:flex;flex-direction:column}.hero-stats strong{font-size:24px}.hero-stats span{font-size:11px;color:#b9d0dc}.cards-2{display:grid;grid-template-columns:1fr 1fr;gap:25px}.module-card,.panel{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 28px #29496c0c}.module-card{padding:32px}.module-icon{width:49px;height:49px;display:grid;place-items:center;font-size:22px;font-weight:900;border-radius:13px;margin-bottom:22px}.module-icon.blue{background:#e4f1fc;color:#2775ab}.module-icon.green{background:#e7f7f0;color:#247658}.module-card h2{margin:8px 0;font-size:23px}.module-card>p{min-height:88px;color:var(--muted)}.module-card .tag{font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:800;color:var(--blue)}.page-title{margin:6px 0 26px}.page-title h1{margin:2px 0 4px;font-size:32px;color:var(--navy);line-height:1.2}.page-title>p{color:var(--muted);margin-top:7px}.stack{display:flex;flex-direction:column;gap:20px}.panel{padding:29px}.panel.narrow{max-width:680px}.section-header{display:flex;align-items:center;gap:16px;margin-bottom:24px}.section-header h2{font-size:20px;margin:0}.section-header p{font-size:13px;color:var(--muted);margin:2px 0}.step{height:43px;min-width:43px;border-radius:12px;background:#e7f2f9;display:grid;place-items:center;font-weight:900;color:var(--blue)}.step.green{background:#e6f5eb;color:var(--green)}.form-grid{display:grid;gap:17px}.form-grid.two{grid-template-columns:1fr 1fr}.form-grid.three{grid-template-columns:repeat(3,1fr)}.room-grid{grid-template-columns:1.5fr 1.6fr 1.3fr}.form-grid>div{min-width:0}label{display:block;font-weight:700;color:#45576a;font-size:12px;margin-bottom:8px}input,select{font:inherit;width:100%;padding:12px 13px;border:1px solid #cfdae4;border-radius:9px;background:#fff;outline:none;min-height:47px;color:#1a3450}input:focus,select:focus{border-color:#2385bf;box-shadow:0 0 0 3px #2183bc17}input[readonly]{background:#f1f5f8}button{font:inherit;cursor:pointer}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:750;border-radius:9px;padding:12px 17px;white-space:nowrap;border:1px solid transparent;line-height:1.3;transition:filter .15s}.btn:hover{text-decoration:none;filter:brightness(.96)}.btn-primary{background:#166ca9;color:#fff}.btn-secondary{background:#eff4f8;color:#26425c;border-color:#d9e5ee}.btn-ghost{background:transparent;border-color:#8094a8;color:#fff}.btn-sm{padding:7px 12px;font-size:12px}.btn.full{width:100%;margin-top:24px}.input-button{display:flex;gap:8px}.input-button input{flex:1;min-width:90px}.input-button .btn{padding:10px 16px}.room-actions{display:flex;gap:8px;align-items:end;padding-top:27px}.room-actions .btn{flex:1;padding:12px 8px}.small-link{display:inline-block;font-size:13px;font-weight:650;margin-top:15px}.hint{font-size:12px;color:var(--muted);margin-top:13px}.actions{display:flex;gap:10px;align-items:center;margin-top:21px;flex-wrap:wrap}.actions.end{justify-content:flex-end}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:660px}th{text-align:left;color:#567087;font-size:11px;text-transform:uppercase;letter-spacing:.65px;background:#f4f8fb;padding:12px 12px;border-bottom:1px solid var(--line)}td{padding:14px 12px;border-bottom:1px solid #e7edf2;font-size:13px}td.empty{text-align:center;color:#8593a1;padding:29px}.totals{max-width:330px;margin:22px 0 0 auto}.totals>div{display:flex;justify-content:space-between;padding:7px 0;font-size:13px;color:#637487}.totals strong{color:#283e53}.totals .grand{border-top:1px solid var(--line);margin-top:5px;padding-top:11px;font-size:16px;font-weight:800;color:var(--navy)}.grand strong{color:#0a638f}.info-grid{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:28px;border-bottom:1px solid var(--line);padding-bottom:22px}.info-grid>div{min-width:120px;display:flex;flex-direction:column}.info-grid span{font-size:11px;color:var(--muted)}.info-grid strong{font-size:14px;margin-top:5px}.validation{color:#b12b36;background:#fff2f0;border-radius:8px;padding:12px 17px;font-size:13px}.validation:empty{display:none}.alert{padding:15px 22px;border-radius:12px;margin-bottom:22px}.success{background:#e9f7ef;color:#16734c;border:1px solid #caead9}.auth-wrap{max-width:470px;margin:20px auto}.auth-panel h1{font-size:26px;line-height:1.2}.auth-panel label{margin-top:18px}.muted{color:var(--muted)}.demo-box{margin-top:24px;background:#f4f9fd;padding:17px;border-radius:11px;color:#40546c;font-size:12px}.demo-box p{margin:9px 0}.demo-box code{background:#e4eef6;border-radius:4px;padding:2px 5px}.demo-box small{color:#8a6770}.remove-btn{border:0;background:#ffefec;color:#b13c35;border-radius:7px;padding:6px 10px;font-size:12px;font-weight:700}.remove-btn:hover{background:#ffe0da}.qty-inline{max-width:90px;min-height:34px;padding:5px 8px}.pill{display:inline-block;padding:3px 9px;border-radius:12px;background:#e7f3fc;color:#1a668b;font-size:11px;font-weight:800}
+@media(max-width:900px){.nav-bar{flex-wrap:wrap;padding-top:17px;padding-bottom:17px;gap:15px}nav{order:3;width:100%;flex:unset;justify-content:space-between}.hero{padding:40px 28px}.room-grid{grid-template-columns:1fr 1fr}.room-actions{grid-column:1/-1;padding:0}.form-grid.three{grid-template-columns:1fr 1fr}}@media(max-width:640px){.container{padding:0 14px}.nav-user span{display:none}.site-header nav{gap:12px;flex-wrap:wrap}.page-content{padding-top:24px}.hero{border-radius:14px}.hero-stats{gap:18px;justify-content:space-between}.hero-stats strong{font-size:19px}.cards-2,.form-grid.two,.form-grid.three,.room-grid{grid-template-columns:1fr}.panel,.module-card{padding:19px}.page-title h1{font-size:26px}.room-actions{grid-column:auto}.info-grid{gap:18px}.actions.end{justify-content:stretch}.actions.end .btn{flex:1}}
+.warning{background:#fff6e7;color:#7c510c;border:1px solid #f1d7a2}
+.warning code{font-family:Consolas,monospace;background:#ffebc6;border-radius:4px;padding:2px 5px}
+
+/* ENCABEZADO */
+
+.titulo-hotel {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.titulo-hotel:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-derecha {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    flex: unset;
+    align-items: center;
+}
+
+.menu-derecha a {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.menu-derecha a:hover {
+    color: #59dccd;
+}
+
+/* PAGINA DE INICIO */
+
+.inicio-container {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.inicio-container h1 {
+    font-size: 30px;
+    color: #142b46;
+}
+
+.inicio-container > p {
+    color: #637487;
+    margin-bottom: 30px;
+}
+
+.opciones-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.opcion-card {
+    background: white;
+    border: 1px solid #dce5ed;
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.opcion-card h2 {
+    color: #142b46;
+    font-size: 21px;
+}
+
+.opcion-card p {
+    color: #637487;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 640px) {
+    .menu-derecha {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Acceso de recepcionista (sin logotipo ni imágenes) */
+.login-container {
+    display: flex;
+    min-height: 66vh;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 14px;
+}
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 36px;
+    background: #ffffff;
+    border: 1px solid #dbe6f0;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(12,31,52,.08);
+}
+.login-card h1 { font-size: 28px; margin: 8px 0 10px; color: #10243a; }
+.login-card > p { color: #637487; font-size: 14px; }
+.login-small { color: #12769b; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.login-form { display: flex; flex-direction: column; gap: 10px; margin-top: 25px; }
+.login-form label { font-size: 13px; font-weight: 700; color: #183650; margin-top: 8px; }
+.login-form input {
+    width: 100%;
+    font: inherit;
+    color: #142b46;
+    border: 1px solid #cbd9e5;
+    border-radius: 9px;
+    background: #fff;
+    padding: 12px;
+}
+.login-form input:focus { outline: 2px solid #63b1db; outline-offset: 1px; }
+.login-form .btn { width: 100%; margin-top: 14px; }
+.login-footnote { font-size: 12px !important; line-height: 1.5; margin-top: 18px; }
+.login-alert { padding: 12px; border-radius: 8px; background: #fff1f1; color: #942b2b; }
+.logout-form { margin: 0; display: inline; }
+.logout-button {
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 7px 0;
+}
+.logout-button:hover { color: #59dccd; }
+@media (max-width: 600px) { .login-card { padding: 24px; } }
+
+/* Estado visible de las habitaciones (ECU: Disponible, Reservado, Ocupado) */
+.estados-habitaciones { margin-top: 20px; }
+.estados-habitaciones h3 { margin: 0 0 5px; color: #17334c; font-size: 16px; }
+.estado-etiqueta { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.estado-disponible { color: #116042; background: #dff7eb; }
+.estado-reservado { color: #8a570a; background: #fff0d0; }
+.estado-ocupado { color: #a02028; background: #ffe0e3; }
+.room-empty-message { color: #ad2430 !important; font-weight: 700; }
+.room-ok-message { color: #126544 !important; }
